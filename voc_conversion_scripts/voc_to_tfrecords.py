@@ -16,7 +16,7 @@ from datetime import datetime
 import numpy as np
 import tensorflow as tf
 
-from voc_to_hdf5 import get_ids
+from voc_conversion_scripts.voc_to_hdf5 import get_ids
 
 sets_from_2007 = [('2007', 'train'), ('2007', 'val')]
 train_set = [('2012', 'train'), ('2012', 'val')]
@@ -241,4 +241,4 @@ def _main(args):
 
 
 if __name__ == '__main__':
-    _main(parser.parse_args(args))
+    _main(parser.parse_args())

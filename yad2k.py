@@ -10,6 +10,7 @@ import configparser
 import io
 import os
 from collections import defaultdict
+import codecs
 
 import numpy as np
 from keras import backend as K
@@ -50,7 +51,7 @@ def unique_config_sections(config_file):
     """
     section_counters = defaultdict(int)
     output_stream = io.StringIO()
-    with open(config_file) as fin:
+    with codecs.open(config_file, encoding='utf8') as fin:
         for line in fin:
             if line.startswith('['):
                 section = line.strip().strip('[]')

@@ -178,6 +178,7 @@ def _main(args):
                                   class_names, out_scores)
     plt.imshow(image_with_boxes, interpolation='nearest')
     plt.show()
+    plt.savefig('train_overfit.jpg')
 
 
 if __name__ == '__main__':
